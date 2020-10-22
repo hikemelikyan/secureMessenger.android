@@ -1,0 +1,101 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        kotlin_version = '1.4.10'
+        def kotlinCoroutineVersion = '1.3.3'
+        def lifecycleVersion = '2.2.0'
+        def retrofit_version = '2.7.2'
+        def navigationVersion = '2.3.0-rc01'
+        def facebook_version = '6.1.0'
+
+        thirdPartyLibraries = [
+                //Kotlin
+                "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+
+                //Coroutines
+                "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinCoroutineVersion",
+                "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutineVersion",
+
+                //AndroidX
+                'androidx.appcompat:appcompat:1.2.0',
+
+                //KotlinX
+                "androidx.core:core-ktx:1.2.0",
+
+                //KotlinX fragments for lazy viewModels
+                "androidx.fragment:fragment-ktx:1.2.2",
+
+                //Constraint layout
+                "androidx.constraintlayout:constraintlayout:2.0.0-beta7",
+
+                //Multidex
+                "androidx.multidex:multidex:2.0.1",
+
+                //lifecycle extensions LiveData ViewModel
+                "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion",
+                "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion",
+
+                // Navigation library
+                "androidx.navigation:navigation-fragment-ktx:$navigationVersion",
+                "androidx.navigation:navigation-ui-ktx:$navigationVersion",
+
+                //networking and serialization
+                "com.squareup.retrofit2:retrofit:$retrofit_version",
+                "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version",
+                "com.squareup.retrofit2:converter-gson:$retrofit_version",
+                "com.squareup.retrofit2:converter-scalars:$retrofit_version",
+
+                //Glide
+                "com.github.bumptech.glide:glide:4.11.0",
+
+                //Material library
+                "com.google.android.material:material:1.2.0-alpha05",
+
+                //Google Auth
+                "com.google.android.gms:play-services-auth:18.0.0",
+
+                //Facebook
+                "com.facebook.android:facebook-login:$facebook_version",
+                "com.facebook.android:facebook-android-sdk:$facebook_version",
+
+                "androidx.legacy:legacy-support-v4:1.0.0"
+
+        ]
+
+        testDependencies = [
+                'junit:junit:4.13'
+        ]
+
+        androidTestsDependencies = [
+                'androidx.test:runner:1.2.0',
+                'androidx.test.espresso:espresso-core:3.2.0'
+        ]
+    }
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.gms:google-services:4.3.4'
+        classpath 'androidx.navigation:navigation-safe-args-gradle-plugin:2.3.1'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

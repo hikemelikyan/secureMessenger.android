@@ -1,0 +1,38 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="SecureMessenger" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">?attr/styledBackgroundColor</item>
+        <item name="colorPrimaryDark">?attr/styledBackgroundColor</item>
+        <item name="colorAccent">@color/tintGreenLight</item>
+        <item name="android:navigationBarColor">@color/styledBackgroundColorLight</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="styledTintColor">@color/styledTintColorLight</item>
+        <item name="styledBackgroundColor">@color/styledBackgroundColorLight</item>
+        <item name="styledBackgroundColorReversed">@color/styledBackgroundColor</item>
+        <item name="styledSnackBarColor">@color/styledBackgroundColor</item>
+    </style>
+
+
+    <style name="BottomSheetDialogTheme" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">?attr/styledBackgroundColor</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <item name="android:windowAnimationStyle">@style/BottomSheet.AnimationStyle</item>
+        <item name="background">?attr/styledBackgroundColor</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_top_rounded_background</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme.Root" parent="BottomSheetDialogTheme" />
+
+    <style name="BottomSheet.AnimationStyle">
+        <item name="android:windowEnterAnimation">@anim/bottom_sheet_slide_in</item>
+        <item name="android:windowExitAnimation">@anim/bottom_sheet_slide_out</item>
+    </style>
+
+</resources>
