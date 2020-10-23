@@ -39,5 +39,6 @@
     <color name="tintGreenDarkAlpha">#8FA6CB45</color>
 
     <color name="tintGray">#959697</color>
+    <color name="greyLight">#E1E1E5</color>
 
 </resources>

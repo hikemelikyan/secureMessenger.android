@@ -1,25 +1,31 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="SecureMessenger" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">?attr/styledBackgroundColor</item>
-        <item name="colorPrimaryDark">?attr/styledBackgroundColor</item>
         <item name="colorAccent">@color/tintGreenLight</item>
         <item name="android:navigationBarColor">@color/styledBackgroundColorLight</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="styledTintColor">@color/styledTintColorLight</item>
-        <item name="styledBackgroundColor">@color/styledBackgroundColorLight</item>
-        <item name="styledBackgroundColorReversed">@color/styledBackgroundColor</item>
-        <item name="styledSnackBarColor">@color/styledBackgroundColor</item>
     </style>
 
+    <style name="SecureMessenger.NoActionBar">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/background_white_gradient</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+    </style>
+
+    <style name="SplashScreenTheme" parent="SecureMessenger.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+    </style>
 
     <style name="BottomSheetDialogTheme" parent="@style/Theme.Design.Light.BottomSheetDialog">
         <item name="android:windowIsFloating">false</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">?attr/styledBackgroundColor</item>
+        <item name="android:navigationBarColor">@color/styledBackgroundColorLight</item>
         <item name="android:windowSoftInputMode">adjustPan</item>
         <item name="android:windowAnimationStyle">@style/BottomSheet.AnimationStyle</item>
-        <item name="background">?attr/styledBackgroundColor</item>
+        <item name="background">@color/styledBackgroundColorLight</item>
         <item name="bottomSheetStyle">@style/BottomSheet</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>

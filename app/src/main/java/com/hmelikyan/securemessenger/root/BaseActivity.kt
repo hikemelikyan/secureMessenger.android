@@ -94,8 +94,8 @@ open class BaseActivity : AppCompatActivity(), IBaseView {
 
     private fun showSnackBar(message: String) {
         Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_LONG)
-            .setBackgroundTint(getStyledAttribute(R.attr.styledSnackBarColor))
-            .setTextColor(getStyledAttribute(R.attr.styledBackgroundColor))
+            .setBackgroundTint(resources.getColor(R.color.styledBackgroundColor))
+            .setTextColor(resources.getColor(android.R.color.white))
             .show()
     }
 
