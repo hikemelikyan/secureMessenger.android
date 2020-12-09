@@ -26,15 +26,6 @@ open class BaseActivity : AppCompatActivity(), IBaseView {
 
     val notificationsLiveData: MutableLiveData<Boolean> = MutableLiveData()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        if (getAppMode() == AppMode.DARK) {
-            clearLightStatusBar()
-        } else {
-            setLightStatusBar()
-        }
-        super.onCreate(savedInstanceState)
-    }
-
     override fun setLightStatusBar() {
         isLightStatusBar = true
         when {
@@ -94,7 +85,7 @@ open class BaseActivity : AppCompatActivity(), IBaseView {
 
     private fun showSnackBar(message: String) {
         Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_LONG)
-            .setBackgroundTint(resources.getColor(R.color.styledBackgroundColor))
+            .setBackgroundTint(resources.getColor(R.color.colorAccent))
             .setTextColor(resources.getColor(android.R.color.white))
             .show()
     }

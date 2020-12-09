@@ -1,15 +1,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="SecureMessenger" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorAccent">@color/tintGreenLight</item>
-        <item name="android:navigationBarColor">@color/styledBackgroundColorLight</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="colorAccent">@color/dark_blue</item>
+        <item name="android:navigationBarColor">@color/dark_blue</item>
+        <item name="android:statusBarColor">@color/dark_blue</item>
+        <item name="android:windowBackground">@color/dark_blue</item>
     </style>
 
     <style name="SecureMessenger.NoActionBar">
         <item name="windowActionBar">true</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:windowBackground">@drawable/background_white_gradient</item>
         <item name="android:windowContentTransitions">true</item>
         <item name="android:statusBarColor">@android:color/white</item>
     </style>
@@ -19,26 +19,15 @@
         <item name="android:statusBarColor">@android:color/white</item>
     </style>
 
-    <style name="BottomSheetDialogTheme" parent="@style/Theme.Design.Light.BottomSheetDialog">
-        <item name="android:windowIsFloating">false</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@color/styledBackgroundColorLight</item>
-        <item name="android:windowSoftInputMode">adjustPan</item>
-        <item name="android:windowAnimationStyle">@style/BottomSheet.AnimationStyle</item>
-        <item name="background">@color/styledBackgroundColorLight</item>
-        <item name="bottomSheetStyle">@style/BottomSheet</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
-    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
-        <item name="android:background">@drawable/bottom_sheet_top_rounded_background</item>
-    </style>
-
-    <style name="BottomSheetDialogTheme.Root" parent="BottomSheetDialogTheme" />
-
-    <style name="BottomSheet.AnimationStyle">
-        <item name="android:windowEnterAnimation">@anim/bottom_sheet_slide_in</item>
-        <item name="android:windowExitAnimation">@anim/bottom_sheet_slide_out</item>
+    <style name="BaseBtnWidgetStyle">
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/bcg_ripple_green_rounded_10</item>
     </style>
 
 </resources>

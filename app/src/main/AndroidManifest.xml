@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/SecureMessenger">
+
         <activity
             android:name=".ui.SplashScreenActivity"
             android:theme="@style/SplashScreenTheme">
@@ -19,9 +20,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.SplashScreenSecondActivity"
+
+        <activity
+            android:name=".ui.SplashScreenSecondActivity"
             android:theme="@style/SplashScreenTheme" />
-        <activity android:name=".ui.MainActivity" />
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:windowSoftInputMode="adjustPan" />
+
     </application>
 
 </manifest>

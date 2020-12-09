@@ -2,6 +2,7 @@ package com.hmelikyan.securemessenger.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.hmelikyan.securemessenger.databinding.ActivitySplashScreenSecondBinding
@@ -12,7 +13,8 @@ import kotlinx.coroutines.launch
 class SplashScreenSecondActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setLightStatusBar()
+        window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+        clearLightStatusBar()
         val binding = ActivitySplashScreenSecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
